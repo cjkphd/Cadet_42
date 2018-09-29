@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/09/29 13:22:14 by mamateo          ###   ########.fr        #
+#    Updated: 2018/09/29 16:28:19 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 
 HEADER = libft.h
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -c
 
 CFILES = ft_isdigit.c\
 		 ft_tolower.c\
@@ -29,12 +29,12 @@ CFILES = ft_isdigit.c\
 		 ft_strncpy.c\
 		 ft_strdup.c\
 
-OBJECTS = $(CFILES: .c=.o)
+OBJECTS = $(CFILES:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) -I $(HEADER) $(CFILES) 
+	$(CC) $(CFLAGS) $(CFILES) -I $(HEADER)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
