@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 21:59:29 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/25 13:39:28 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/09/29 12:15:01 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** and >0 if str1 comes after str2 alphabetically.
 */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

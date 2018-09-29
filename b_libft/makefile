@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/09/25 11:50:11 by mamateo          ###   ########.fr        #
+#    Updated: 2018/09/29 13:22:14 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,18 +29,19 @@ CFILES = ft_isdigit.c\
 		 ft_strncpy.c\
 		 ft_strdup.c\
 
-OBJECTS = $(CFILES: .c = .o)
+OBJECTS = $(CFILES: .c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) -I $(HEADER_DIR) $(CFILES)
+	$(CC) $(CFLAGS) -I $(HEADER) $(CFILES) 
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
 clean:
-	rm -f
+	rm -f $(OBJECTS)
+
 fclean: clean
-	rm -f
+	rm -f $(NAME)
 
 re: fclean all

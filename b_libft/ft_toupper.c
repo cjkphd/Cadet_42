@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 16:33:50 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/25 13:36:32 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/09/29 12:16:46 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** why do we need toupper?--to change lwr case to upr
 */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

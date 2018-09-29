@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 10:13:35 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/25 13:38:24 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/09/29 12:16:11 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** To find the length of a string
 */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
