@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 21:59:29 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/29 12:15:01 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/02 20:21:40 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int	lex;
+	int	i;
 
-	lex = 0;
-	while (s1[lex] && s2[lex] && s1[lex] == s2[lex])
-		lex++;
-	return (s1[lex] - s2[lex]);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
 /*

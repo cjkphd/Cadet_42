@@ -6,7 +6,11 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
+<<<<<<< HEAD
+#    Updated: 2018/10/02 20:23:16 by mamateo          ###   ########.fr        #
+=======
 #    Updated: 2018/09/29 16:28:19 by mamateo          ###   ########.fr        #
+>>>>>>> 116077d7f158c80821750f0e161fe5a69366c9b4
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,9 +43,9 @@ $(NAME):
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	/bin/rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
 re: fclean all

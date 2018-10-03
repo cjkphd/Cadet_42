@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/13 18:09:53 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/29 12:15:57 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/02 20:22:12 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strdup(const char *s1)
 	while (s1[len] != '\0')
 		len++;
 	dupe = (char *)malloc(sizeof(char) * (len + 1));
-	if (dupe != NULL)
+	if (!dupe)
+		return (NULL);
 	{
 		len = 0;
 		while (s1[len] != '\0')
