@@ -6,15 +6,9 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 21:59:29 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/03 12:39:47 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 15:22:37 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** strcmp will return 0 if the two strings are equal,
-** <0 if str1 comes before str2 alphabetically,
-** and >0 if str1 comes after str2 alphabetically.
-*/
 
 #include "libft.h"
 

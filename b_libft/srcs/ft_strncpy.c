@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/14 17:30:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/02 20:20:34 by mamateo          ###   ########.fr       */
+/*   Created: 2018/09/17 17:53:07 by mamateo           #+#    #+#             */
+/*   Updated: 2018/10/04 16:22:04 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int	i;
+	size_t i;
 
 	i = 0;
-	if (c == '\0')
+	while (src[i] != '\0' && i < len)
 	{
-		while (str[i] != '\0')
-			i++;
-		return  ((char *)str + i);
-	}
-	while (str[i])
-	{
-		if (str[i] == c)
-			return ((char *)str + i);
+		dst[i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	while (i < len)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
 }
 
 /*
-**int		main(void)
+** #include <stdio.h>
+**
+**int main()
 **{
-**	printf("%s\n", ft_strchr("monster", 'o'));
-**	printf("%s\n", strchr("monster", 'o'));
-**	return (0);
+**	char test1[15] = "asdfasdf";
+**	printf("%s\n", ft_strncpy(test1, "monster", 10));
+**	printf("%s\n", strncpy(test1, "monster", 10));
+**	return 0;
 **}
 */

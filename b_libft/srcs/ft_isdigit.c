@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 10:13:35 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/29 12:16:11 by mamateo          ###   ########.fr       */
+/*   Created: 2018/09/14 10:39:33 by mamateo           #+#    #+#             */
+/*   Updated: 2018/10/04 14:31:25 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** To find the length of a string
-*/
-
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_isdigit(int c)
 {
-	int len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
+
+/*
+**#include <stdio.h>
+**
+**int	main()
+**{
+**	printf("%i\n", ft_isdigit('A'));
+**	printf("%i\n", ft_isdigit('0'));
+**	return (0);
+**}
+*/

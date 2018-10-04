@@ -6,13 +6,9 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 16:33:50 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/29 12:16:46 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 15:21:07 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** why do we need toupper?--to change lwr case to upr
-*/
 
 #include "libft.h"
 

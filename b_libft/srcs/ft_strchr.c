@@ -1,43 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/17 17:53:07 by mamateo           #+#    #+#             */
-/*   Updated: 2018/09/29 12:16:22 by mamateo          ###   ########.fr       */
+/*   Created: 2018/09/14 17:30:51 by mamateo           #+#    #+#             */
+/*   Updated: 2018/10/02 19:15:03 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strchr(const char *str, int c)
 {
-	size_t i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < len)
+	if (c == '\0')
 	{
-		dst[i] = src[i];
+		while (str[i] != '\0')
+			i++;
+		return ((char *)str + i);
+	}
+	while (str[i])
+	{
+		if (str[i] == c)
+			return ((char *)str + i);
 		i++;
 	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (NULL);
 }
-
 /*
-** #include <stdio.h>
-**
-**int main()
+**int		main(void)
 **{
-**	char test1[15] = "asdfasdf";
-**	printf("%s\n", ft_strncpy(test1, "monster", 10));
-**	printf("%s\n", strncpy(test1, "monster", 10));
-**	return 0;
+**	printf("%s\n", ft_strchr("poop", 'z'));
+**	printf("%s\n", ft_strchr("poop", '\0'));
+**	printf("%s\n", strchr("poop", 'z'));
+**	printf("%s\n", strchr("poop", '\0'));
+**	return (0);
 **}
+**if (str[i] == (char)c)
+**return ((char *)&str[i]);
 */
