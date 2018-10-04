@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 10:39:33 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 14:31:25 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 16:30:59 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-/*
-**#include <stdio.h>
-**
-**int	main()
-**{
-**	printf("%i\n", ft_isdigit('A'));
-**	printf("%i\n", ft_isdigit('0'));
-**	return (0);
-**}
-*/

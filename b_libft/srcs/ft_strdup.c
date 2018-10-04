@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/13 18:09:53 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/02 19:08:49 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 16:32:35 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ char	*ft_strdup(const char *s1)
 	dupe[i] = '\0';
 	return (dupe);
 }
-
-/*
-**#include <stdio.h>
-**
-** int 	main(void)
-**{
-**	printf("%s\n", ft_strdup("poop"));
-**	return (0);
-**}
-*/

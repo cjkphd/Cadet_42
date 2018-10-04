@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 17:53:07 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 16:22:04 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 16:32:48 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-** #include <stdio.h>
-**
-**int main()
-**{
-**	char test1[15] = "asdfasdf";
-**	printf("%s\n", ft_strncpy(test1, "monster", 10));
-**	printf("%s\n", strncpy(test1, "monster", 10));
-**	return 0;
-**}
-*/

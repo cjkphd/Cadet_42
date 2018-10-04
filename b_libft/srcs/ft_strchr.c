@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 17:30:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/02 19:15:03 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 16:31:10 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-/*
-**int		main(void)
-**{
-**	printf("%s\n", ft_strchr("poop", 'z'));
-**	printf("%s\n", ft_strchr("poop", '\0'));
-**	printf("%s\n", strchr("poop", 'z'));
-**	printf("%s\n", strchr("poop", '\0'));
-**	return (0);
-**}
-**if (str[i] == (char)c)
-**return ((char *)&str[i]);
-*/

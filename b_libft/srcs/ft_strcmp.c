@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 21:59:29 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 15:22:37 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 16:32:26 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int		ft_strcmp(const char *s1, const char *s2)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-/*
-**int		main()
-**{
-**	printf("%d\n", ft_strcmp("Hello", "earth"));
-**	return 0;
-**}
-*/
