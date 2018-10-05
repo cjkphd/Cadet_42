@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/02 20:22:39 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/04 17:53:04 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int		ft_strcmp(const char *s1, const char *s2);
 
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 
 char	*ft_strcpy(char *dst, const char *src);
 
