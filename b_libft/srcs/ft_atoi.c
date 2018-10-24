@@ -1,46 +1,28 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/09 11:51:23 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/09 11:52:15 by mamateo          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_atoi(const char *str)
 {
-	int		sign;
-	int		ans;
+	int i;
+	int sym;
+	int result;
 
-	ans = 0;
-	sign = 1;
-	if (str)
+	i = 0;
+	sym = 1;
+	result = 0;
+	//while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n') || (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		while (*str && (*str == '\t' || *str == '\f' || *str == '\r'
-					|| *str == '\n' || *str == '\v' || *str == ' '))
-			str++;
-		if (*str == '-' && str++)
-			sign = -1;
-		else if (*str == '+' && str++)
-			sign = 1;
-		while (*str && *str >= 48 && *str <= 57)
-				ans = ans * 10 + (*str++ - '0');
+		if (str[i] == '-')
+			sym = -1;
+		i++;
 	}
-	printf("%d\n", (sign * ans));
-	return (sign * ans);
-}
-
-/*
-int		main(void)
+	while ((str[i] >= '0') && (str[i] <= '9'))
 {
-	ft_atoi("\n \t \t \v \f \r 		-0691");
-	printf("%d\n", atoi(" \n \t \v \f \r  	-0619"));
-	return 0;
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	return (result * sym);
 }
-*/
