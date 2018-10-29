@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/25 12:07:43 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/25 12:07:47 by mamateo          ###   ########.fr       */
+/*   Created: 2018/10/25 12:10:36 by mamateo           #+#    #+#             */
+/*   Updated: 2018/10/29 13:14:54 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		ft_atoi(const char *str)
 }
 
 /*
-**Optional Conditions for Discarding Whitespaces: 
+** Optional Conditions for Discarding Whitespaces:
 **while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
 **|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
- */
+*/
