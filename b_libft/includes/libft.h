@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/04 17:53:04 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/29 13:38:56 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 # include <string.h>
 # include <stdlib.h>
 # include <ctype.h>
+# include <locale.h>
+# include <stdarg.h>
+
+void	ft_bzero(void *s, size_t n);
 
 int		ft_strcmp(const char *s1, const char *s2);
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 size_t	ft_strlen(char *str);
 
@@ -37,5 +43,21 @@ int		ft_toupper(int c);
 void	*ft_memset(void *b, int c, size_t len);
 
 int		ft_tolower(int c);
+
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str);
+
+void	ft_swap(int *a, int *b);
+
+int		ft_isalnum(int c);
+
+int		ft_isascii(int c);
+
+int		ft_isprint(int c);
+
+int		ft_isalpha(int c);
+
+int		ft_atoi(const char *str);
 
 #endif
