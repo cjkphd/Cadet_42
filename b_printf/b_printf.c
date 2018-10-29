@@ -6,13 +6,13 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 11:24:37 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/16 11:25:10 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/26 10:42:11 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printflib.h"
 
-static int		ft_chooseprint(va_list ap, char c)
+static int	ft_chooseprint(va_list ap, char c)
 {
 	if (c == 'c')
 		return (ft_charprint(ap));
@@ -33,7 +33,7 @@ static int		ft_chooseprint(va_list ap, char c)
 	return (0);
 }
 
-int				b_printf(const char *format, ...)
+int			b_printf(const char *format, ...)
 {
 	int			i;
 	int			len;
