@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/29 13:38:56 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/30 15:34:40 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <ctype.h>
 # include <locale.h>
 # include <stdarg.h>
+# include <strings.h>
 
 void	ft_bzero(void *s, size_t n);
 
@@ -41,6 +42,10 @@ int		ft_isdigit(int c);
 int		ft_toupper(int c);
 
 void	*ft_memset(void *b, int c, size_t len);
+
+void	*ft_memcpy(void *dst, void *src, size_t n);
+
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 int		ft_tolower(int c);
 
