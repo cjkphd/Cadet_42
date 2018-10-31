@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/30 15:34:40 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/10/30 19:42:10 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, void *src, size_t n);
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
 int		ft_tolower(int c);
 

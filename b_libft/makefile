@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/10/04 15:07:26 by mamateo          ###   ########.fr        #
+#    Updated: 2018/10/30 19:41:16 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,36 +14,39 @@ NAME = libft.a
 
 CC = gcc
 
-HEADER = includes/
+HEADER = libft.h
 
 CFLAGS = -Wall -Wextra -Werror -c
 
-CFILES = srcs/ft_isdigit.c\
-		 srcs/ft_tolower.c\
-		 srcs/ft_toupper.c\
-		 srcs/ft_memset.c\
-		 srcs/ft_strchr.c\
-		 srcs/ft_strcpy.c\
-		 srcs/ft_strcmp.c\
-		 srcs/ft_strlen.c\
-		 srcs/ft_strncpy.c\
-		 srcs/ft_strdup.c\
+CFILES = ft_atoi.c\
+		 ft_bzero.c\
+		 ft_isdigit.c\
+		 ft_isalnum.c\
+		 ft_isascii.c\
+		 ft_isprint.c\
+		 ft_memset.c\
+		 ft_memcpy.c\
+		 ft_memccpy.c\
+		 ft_memmove.c\
+		 ft_putchar.c\
+		 ft_putstr.c\
+		 ft_strchr.c\
+		 ft_strcpy.c\
+		 ft_strcmp.c\
+		 ft_strncmp.c
+		 ft_strlen.c\
+		 ft_strncpy.c\
+		 ft_strdup.c\
+		 ft_swap.c\
+		 ft_tolower.c\
+		 ft_toupper.c\
 		 
-OBJECTS = ft_isdigit.o\
-		  ft_tolower.o\
-		  ft_toupper.o\
-		  ft_memset.o\
-		  ft_strchr.o\
-		  ft_strcpy.o\
-		  ft_strcmp.o\
-		  ft_strlen.o\
-		  ft_strncpy.o\
-		  ft_strdup.o\
+OBJECTS = $(CFILES:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(CFILES) -I$(HEADER)
+	$(CC) $(CFLAGS) $(CFILES) -I $(HEADER)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
