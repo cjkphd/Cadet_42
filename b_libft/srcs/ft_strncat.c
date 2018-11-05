@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 09:56:07 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/02 14:07:44 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/05 13:19:36 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/05 13:54:49 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char *ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char		*here;
-	const char	*from;
+	size_t	i;
+	size_t	j;
 
-	here = dst;
-	from = src;
-	while (n-- > 0)
+	j = 0;
+	i = ft_strlen(s1);
+	while (s2[j] != '\0' && j < n)
 	{
-		if ((*here++ = *from++) == (char)c)
-			return (here);
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (NULL);
+	s1[i + j] = '\0';
+	return (s1);
 }
