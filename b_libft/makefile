@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/11/05 13:55:17 by mamateo          ###   ########.fr        #
+#    Updated: 2018/11/05 14:13:20 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ CFILES = ft_atoi.c\
 		 ft_putchar.c\
 		 ft_putstr.c\
 		 ft_strcat.c\
+		 ft_strlcat.c\
 		 ft_strncat.c\
 		 ft_strchr.c\
 		 ft_strcpy.c\
@@ -56,6 +57,7 @@ OBJECTS = ft_atoi.o\
 		  ft_putchar.o\
 		  ft_putstr.o\
 		  ft_strcat.o\
+		  ft_strlcat.o\
 		  ft_strncat.o\
 		  ft_strchr.o\
 		  ft_strcpy.o\
