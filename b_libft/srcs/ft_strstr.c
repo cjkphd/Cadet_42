@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 14:04:41 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/05 14:22:49 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/05 15:03:48 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/05 19:57:42 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+char	*ft_strstr(const char *hs, const char *ne)
 {
 	size_t i;
 	size_t j;
-	size_t k;
 
-	j = 0;
-	i = ft_strlen(dst);
-	while (src[j] != '\0' && j < n)
+	i = 0;
+	while (hs[i] != '\0')
 	{
-		dst[i + j] = src[j];
-		j++;
+		j = 0;
+		while (ne[j] == hs[i + j])
+		{
+			if (ne[j + i] == '\0')
+			{
+				return (hs + i);
+			}
+			j++;
+		}
+		i++;
 	}
-	dst[i + j] = '\0';
-	k = 0;
-	while (src[k] != '\0')
-		k++;
-	return (k + n);
+	return (0);
 }

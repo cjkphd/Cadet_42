@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/11/05 14:14:13 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/05 20:00:22 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,13 @@ void	ft_bzero(void *s, size_t n);
 
 char	*ft_strcat(char *s1, const char *s2);
 
-char	ft_strlcat(char *dst, const char *src, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
 char	*ft_strncat(char *s1, const char *s2, size_t n);
+
+char	*ft_strstr(const char *haystack, const char *needle);
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int		ft_strcmp(const char *s1, const char *s2);
 
@@ -40,6 +44,8 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(const char *s1);
 
 char	*ft_strchr(const char *str, int c);
+
+char	*ft_strrchr(const char *s, int c);
 
 size_t	ft_strlen(char *str);
 

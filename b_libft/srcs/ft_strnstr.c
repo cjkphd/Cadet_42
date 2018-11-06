@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 14:04:41 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/05 14:22:49 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/05 16:32:31 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/05 19:25:53 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
-	size_t k;
+	size_t	i;
 
-	j = 0;
-	i = ft_strlen(dst);
-	while (src[j] != '\0' && j < n)
+	i = 0;
+	len = ft_strlen(*needle);
+	if (!needle)
+		return ((char *)haystack);
+	while (((i + len) <= len) && *haystack)
 	{
-		dst[i + j] = src[j];
-		j++;
+		if (ft_memcmp(haystack, needle, len) == 0)
+			return (char *)(haystack);
+		haystack++;
+		i++;
 	}
-	dst[i + j] = '\0';
-	k = 0;
-	while (src[k] != '\0')
-		k++;
-	return (k + n);
+	return (NULL);
 }

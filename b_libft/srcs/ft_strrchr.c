@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 14:04:41 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/05 14:22:49 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/05 14:25:21 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/05 16:31:39 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+char			*ft_strrchr(const char *s, int c)
 {
-	size_t i;
-	size_t j;
-	size_t k;
-
-	j = 0;
-	i = ft_strlen(dst);
-	while (src[j] != '\0' && j < n)
+	const char	*found;
+	const char	*a;
+	c = (char)c;
+	if (c == '\0')
+		return (ft_strchr(s, '\0'));
+	found = NULL;
+	while ((a = ft_strchr(s, c)) != NULL)
 	{
-		dst[i + j] = src[j];
-		j++;
+		found = a;
+		s = a + 1;
 	}
-	dst[i + j] = '\0';
-	k = 0;
-	while (src[k] != '\0')
-		k++;
-	return (k + n);
+	return ((char *)found);
 }
