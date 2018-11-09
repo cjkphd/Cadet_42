@@ -6,15 +6,20 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 11:18:52 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/29 13:09:02 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/08 22:27:00 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(const char *s)
 {
-	while (*str)
-		ft_putchar(*str++);
-	ft_putchar('\n');
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
 }

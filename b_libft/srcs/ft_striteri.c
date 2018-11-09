@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/08 21:51:13 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/08 22:24:37 by mamateo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_striteri(char *s, void (*f)(unsigned int, char *))
+void				ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-  unsigned int  j;
+	unsigned int	j;
 
-  j = 0;
-  if (s && f)
-  {
-    while (j < ft_strlen(s))
-    {
-      (*f)(j, &s[j]);
-      j++;
-    }
-  }
+	j = 0;
+	if (s && f)
+	{
+		while (j < ft_strlen(s))
+		{
+			(*f)(j, &s[j]);
+			j++;
+		}
+	}
 }

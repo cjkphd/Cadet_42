@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 14:25:21 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/05 16:31:39 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/08 22:26:40 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char			*ft_strrchr(const char *s, int c)
 {
 	const char	*found;
 	const char	*a;
+
 	c = (char)c;
 	if (c == '\0')
 		return (ft_strchr(s, '\0'));
