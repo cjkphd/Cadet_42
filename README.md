@@ -1,2 +1,2 @@
 # Cadet_42
-After being accepted into 42, these projects as a Cadet will be the beginning of my career.
+After becoming 42 student, these projects as a Cadet is only the beginning of my career.
