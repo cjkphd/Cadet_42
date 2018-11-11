@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/11/09 16:12:00 by mamateo          ###   ########.fr        #
+#    Updated: 2018/11/11 15:30:19 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ CFILES = ft_atoi.c\
 		 ft_strnew.c\
 		 ft_strnstr.c\
 		 ft_strrchr.c\
+		 ft_strsplit.c\
 		 ft_strstr.c\
 		 ft_strsub.c\
 		 ft_strtrim.c\
@@ -111,6 +112,7 @@ OBJECTS = ft_atoi.o\
 		 ft_strnew.o\
 		 ft_strnstr.o\
 		 ft_strrchr.o\
+		 ft_strsplit.o\
 		 ft_strstr.o\
 		 ft_strsub.o\
 		 ft_strtrim.o\

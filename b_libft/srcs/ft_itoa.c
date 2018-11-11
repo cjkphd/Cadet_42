@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:10:17 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/08 19:10:20 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/11 15:23:49 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ char				*ft_itoa(int n)
 {
 	char		*str;
 	int			len;
-	int			neg_f;
+	int			neg;
 	long long	num;
 
-	neg_f = (n >= 0) ? 0 : 1;
+	neg = (n >= 0) ? 0 : 1;
 	num = n;
-	num = (neg_f) ? -num : num;
-	len = (neg_f) ? ft_nblen(num) + 1 : ft_nblen(num);
+	num = (neg) ? -num : num;
+	len = (neg) ? ft_nblen(num) + 1 : ft_nblen(num);
 	if ((str = ft_strnew(len)) == 0)
 		return (0);
 	if (num == 0)
@@ -45,10 +45,10 @@ char				*ft_itoa(int n)
 		str[0] = '0';
 		return (str);
 	}
-	if (neg_f)
+	if (neg)
 		str[0] = '-';
 	str[len] = '\0';
-	while (len-- > neg_f)
+	while (len-- > neg)
 	{
 		str[len] = num % 10 + '0';
 		num /= 10;

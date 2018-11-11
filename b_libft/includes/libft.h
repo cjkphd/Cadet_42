@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/11/09 17:50:33 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/11 15:31:14 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *s);
 
 char	*ft_strmap(char const *s, char (*f)(char));
 
@@ -112,6 +112,8 @@ char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	*ft_strrchr(const char *s, int c);
+
+char	**ft_strsplit(const char *s, char c);
 
 char	*ft_strstr(const char *hs, const char *ne);
 

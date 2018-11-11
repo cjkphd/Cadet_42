@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:11:41 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/08 22:17:03 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/10 17:41:20 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	str = (char*)malloc(sizeof(char) * (len + 1));
-	if (ptr == NULL)
+	if (str == NULL)
 		return (NULL);
 	i = 0;
 	while (i < len)

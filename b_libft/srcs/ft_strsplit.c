@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/10 19:02:16 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/11 15:24:33 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/11 15:29:16 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	**ft_strsplit(char const *s, char c)
 {
-	unsigned int	i;
-	char			*fresh;
+	char	**modoru;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
-	fresh = ft_strnew(ft_strlen(s));
-	if (fresh == NULL)
-		return (NULL);
+	if (!s || !c)
+		return (0);
+	modoru = ft_memalloc(ft_strlen(s) + 1);
 	i = 0;
+	j = 0;
 	while (s[i])
 	{
-		fresh[i] = f(s[i]);
-		i++;
+		if (s[i] == c)
+			i++;
+		else
+		{
+			len = 0;
+			while (s[i + len] && (s[i + len] != c))
+				len++;
+			modoru[j++] = ft_strsub(s, i, len);
+			i = i + len;
+		}
 	}
-	return (fresh);
+	modoru[j] = 0;
+	return (modoru);
 }

@@ -6,13 +6,13 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 11:18:52 by matmateo          #+#    #+#             */
-/*   Updated: 2018/11/08 22:27:00 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/09 17:37:43 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *s)
+void	ft_putstr(char const *s)
 {
 	int	i;
 
@@ -23,3 +23,7 @@ void	ft_putstr(const char *s)
 		i++;
 	}
 }
+
+/*
+** Experimental Alt: write(1, s, ft_strlen(s));
+*/
