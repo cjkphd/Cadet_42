@@ -6,52 +6,60 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:10:17 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/11 15:23:49 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/15 16:45:34 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long long	ft_nblen(long long nb)
+static	int	count_digits(int n)
 {
-	int	i;
+	int i;
 
-	i = 0;
-	if (nb == 0)
-		return (1);
-	while (nb > 0)
+	i = 1;
+	while (n > 9)
 	{
-		nb /= 10;
+		n /= 10;
 		i++;
 	}
 	return (i);
 }
 
-char				*ft_itoa(int n)
+static	int	is_neg(int n)
 {
-	char		*str;
-	int			len;
-	int			neg;
-	long long	num;
+	if (n < 0)
+		return (1);
+	return (0);
+}
 
-	neg = (n >= 0) ? 0 : 1;
-	num = n;
-	num = (neg) ? -num : num;
-	len = (neg) ? ft_nblen(num) + 1 : ft_nblen(num);
-	if ((str = ft_strnew(len)) == 0)
-		return (0);
-	if (num == 0)
+static	int	ft_abs(int n)
+{
+	if (n < 0)
+		return (-n);
+	return (n);
+}
+
+char		*ft_itoa(int n)
+{
+	int		len;
+	char	*res;
+	int		neg;
+
+	neg = is_neg(n);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (neg)
+		n = -n;
+	len = neg + count_digits(n);
+	res = ft_strnew(len);
+	if (!res)
+		return (NULL);
+	while (len--)
 	{
-		str[0] = '0';
-		return (str);
+		res[len] = ft_abs(n % 10) + '0';
+		n /= 10;
 	}
 	if (neg)
-		str[0] = '-';
-	str[len] = '\0';
-	while (len-- > neg)
-	{
-		str[len] = num % 10 + '0';
-		num /= 10;
-	}
-	return (str);
+		res[0] = '-';
+	return (res);
 }
