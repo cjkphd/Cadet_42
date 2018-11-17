@@ -123,7 +123,7 @@ OBJECTS = ft_atoi.o\
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(CFILES) -I $(HEADER)
+	$(CC) $(CFLAGS) $(CFILES) $(HEADER)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 

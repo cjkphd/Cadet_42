@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+char	*strnew(size_t size)
+{
+		  char *str;
+
+		  str = (char *)malloc(sizeof(char) * size + 1);
+		  if (!str)
+					 return (NULL);
+		  bzero(str, size + 1);
+		  return (str);
+}
+
 static	int	count_digits(int n)
 {
 	int i;
@@ -41,17 +52,17 @@ static	int	ft_abs(int n)
 
 char		*ft_itoa(int n)
 {
-	int		len;
-*res;
-	int		
+	int	len;
+	char	*res;
+	int	neg;
 
 	neg = is_neg(n);
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+		return (strdup("-2147483648"));
 	if (neg)
 		n = -n;
 	len = neg + count_digits(n);
-	res = ft_strnew(len);
+	res = strnew(len);
 	if (!res)
 		return (NULL);
 	while (len--)
@@ -62,4 +73,14 @@ char		*ft_itoa(int n)
 	if (neg)
 		res[0] = '-';
 	return (res);
+}
+
+int 	main()
+{
+		  ft_itoa(-10);
+		  printf("%s\n", ft_itoa(-10));
+		  printf("%s\n", ft_itoa(' '))
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(2147483647));
+		  return 0;
 }

@@ -14,8 +14,7 @@
 
 char				*ft_itoa(int n)
 {
-	char			*buf;//[sizeof(int) * 4];
-	//int malloc? ^
+	char			*buf;		//[sizeof(int) * 4];
 	char			*s;
 	unsigned int	v;
 
@@ -46,9 +45,3 @@ char				*ft_itoa(int n)
 /*
 ** v == variable
 */
-int main()
-{
-  printf("%s\n", ft_itoa(-10));
-  ft_itoa(-10);
-  return 0;
-}

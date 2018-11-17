@@ -1,65 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 19:10:17 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/15 16:45:34 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/16 01:59:45 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/16 01:59:47 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	count_digits(int n)
+char				*ft_itoa(int n)
 {
-	int i;
+	char			*buf;		//[sizeof(int) * 4];
+	char			*s;
+	unsigned int	v;
 
-	i = 1;
-	while (n > 9)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
-
-static	int	is_neg(int n)
-{
-	if (n < 0)
-		return (1);
-	return (0);
-}
-
-static	int	ft_abs(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
-char		*ft_itoa(int n)
-{
-	int		len;
-	char	*res;
-	int		neg;
-
-	neg = is_neg(n);
+	v = n;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (neg)
-		n = -n;
-	len = neg + count_digits(n);
-	res = ft_strnew(len);
-	if (!res)
-		return (NULL);
-	while (len--)
+	if (n < 0)
 	{
-		res[len] = ft_abs(n % 10) + '0';
-		n /= 10;
+  		v = -v;
 	}
-	if (neg)
-		res[0] = '-';
-	return (res);
+	buf = (char *)malloc(sizeof(char) * (4));
+	s = buf + sizeof(buf);
+	//s = ((int *)malloc(sizeof(int) * (4));
+	*--s = '\0';
+	if (!s)
+		return (NULL);
+	while (v >= 10)
+	{
+  		*--s = '0' + v % 10;
+  		v /= 10;
+	}
+	*--s = '0' + v;
+	if (n < 0)
+  		*--s = '-';
+	return ft_strdup(s);
 }
+
+/*
+** v == variable
+*/
