@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:22:54 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/25 16:23:53 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/11/22 00:49:07 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if (c >= 060 && c <= 172)
+	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
 }
-
-/*
-**int	main()
-**{
-**	printf("%d\n", ft_isalnum('0'));
-**	printf("%d\n", ft_isalnum(0));
-**	return 0;
-*/
