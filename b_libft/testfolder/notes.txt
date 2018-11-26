@@ -1,0 +1,42 @@
+PART I
+----------
+//ft_strnstr
+doesn't segfault when null is sent
+
+//ft_atoi
+doesn't work with LONG MAX MIN VALUE??
+
+PART II
+----------
+//ft_strnew
+does not allocate the good size for \0 test is false
+
+//ft_strmap
+does not allocate the good size for \0 test is false
+
+//ft_strmapi
+did not set \0 at end of string
+does not allocate the good size for \0 test is false
+did not protect malloc return
+
+//ft_strtrim
+broken as fuck
+
+//ft_strsplit
+basic input
+not protected
+
+//ft_itoa
+missing
+
+//ft_putchar
+doesn't work with unicode? what's unicode?
+
+//ft_putchar_fd
+unicode again...what's unicode?
+
+//ft_putendl_fd
+missing?--see log for more info
+
+//ft_putnbdr_fd
+missing?--see log for more info

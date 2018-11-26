@@ -1,45 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 01:59:45 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/20 14:31:45 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/10 19:02:16 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char			*buf;
-	char			*s;
-	unsigned int	v;
+	unsigned int	i;
+	char			*fresh;
 
-	v = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
-	{
-		v = -v;
-	}
-	buf = (char *)malloc(sizeof(char) * (4));
-	s = buf + sizeof(buf);
-	*--s = '\0';
-	if (!s)
+	fresh = ft_strnew(ft_strlen(s));
+	if (fresh == NULL)
 		return (NULL);
-	while (v >= 10)
+	i = 0;
+	while (s[i])
 	{
-		*--s = '0' + v % 10;
-		v /= 10;
+		fresh[i] = f(s[i]);
+		i++;
 	}
-	*--s = '0' + v;
-	if (n < 0)
-		*--s = '-';
-	return (ft_strdup(s));
+	return (fresh);
 }
-/*
-** v == variable
-*/

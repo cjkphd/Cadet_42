@@ -1,45 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 01:59:45 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/20 14:31:45 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/08 22:17:06 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/11 15:34:15 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+char		*ft_strtrim(char const *s)
 {
-	char			*buf;
-	char			*s;
-	unsigned int	v;
+	size_t	len;
+	char	*str;
 
-	v = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
-	{
-		v = -v;
-	}
-	buf = (char *)malloc(sizeof(char) * (4));
-	s = buf + sizeof(buf);
-	*--s = '\0';
-	if (!s)
-		return (NULL);
-	while (v >= 10)
-	{
-		*--s = '0' + v % 10;
-		v /= 10;
-	}
-	*--s = '0' + v;
-	if (n < 0)
-		*--s = '-';
-	return (ft_strdup(s));
+	while (*s && (*s == ' ' || *s == '\t'))
+		s++;
+	len = ft_strlen(s);
+	while (*s && (s[--len] == ' ' || s[--len] == '\t'))
+		if (!(str = ft_strnew(len)))
+			return (NULL);
+	str = ft_strncpy(str, s, len + 1);
+	str[len + 1] = '\0';
+	return (str);
 }
-/*
-** v == variable
-*/

@@ -1,45 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 01:59:45 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/20 14:31:45 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/08 22:09:05 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/08 22:11:37 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+char		*ft_strnew(size_t size)
 {
-	char			*buf;
-	char			*s;
-	unsigned int	v;
+	char	*str;
 
-	v = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
-	{
-		v = -v;
-	}
-	buf = (char *)malloc(sizeof(char) * (4));
-	s = buf + sizeof(buf);
-	*--s = '\0';
-	if (!s)
+	str = (char*)malloc(size);
+	if (str == NULL)
 		return (NULL);
-	while (v >= 10)
-	{
-		*--s = '0' + v % 10;
-		v /= 10;
-	}
-	*--s = '0' + v;
-	if (n < 0)
-		*--s = '-';
-	return (ft_strdup(s));
+	ft_memset(str, (int)'\0', size + 1);
+	return (str);
 }
-/*
-** v == variable
-*/

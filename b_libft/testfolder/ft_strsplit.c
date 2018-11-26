@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 01:59:45 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/20 14:31:45 by mamateo          ###   ########.fr       */
+/*   Created: 2018/11/11 15:24:33 by mamateo           #+#    #+#             */
+/*   Updated: 2018/11/11 15:29:16 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+char	**ft_strsplit(char const *s, char c)
 {
-	char			*buf;
-	char			*s;
-	unsigned int	v;
+	char	**modoru;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
-	v = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
+	if (!s || !c)
+		return (0);
+	modoru = ft_memalloc(ft_strlen(s) + 1);
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		v = -v;
+		if (s[i] == c)
+			i++;
+		else
+		{
+			len = 0;
+			while (s[i + len] && (s[i + len] != c))
+				len++;
+			modoru[j++] = ft_strsub(s, i, len);
+			i = i + len;
+		}
 	}
-	buf = (char *)malloc(sizeof(char) * (4));
-	s = buf + sizeof(buf);
-	*--s = '\0';
-	if (!s)
-		return (NULL);
-	while (v >= 10)
-	{
-		*--s = '0' + v % 10;
-		v /= 10;
-	}
-	*--s = '0' + v;
-	if (n < 0)
-		*--s = '-';
-	return (ft_strdup(s));
+	modoru[j] = 0;
+	return (modoru);
 }
-/*
-** v == variable
-*/
