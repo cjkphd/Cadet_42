@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:17:06 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/11 15:34:15 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/03 12:53:53 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,22 @@
 
 char		*ft_strtrim(char const *s)
 {
-	size_t	len;
+	int		len;
 	char	*str;
+	char	*buf;
+	int		begin;
+	int		end;
 
-	while (*s && (*s == ' ' || *s == '\t'))
-		s++;
+	if (!s)
+		return (ft_strnew(0));
+	begin = 0;
+	end = 0;
 	len = ft_strlen(s);
-	while (*s && (s[--len] == ' ' || s[--len] == '\t'))
-		if (!(str = ft_strnew(len)))
-			return (NULL);
-	str = ft_strncpy(str, s, len + 1);
-	str[len + 1] = '\0';
-	return (str);
+	while (ft_whitespace(s[begin++]))
+		;
+	str = (char *)s + (ft_strlen(s) - 1);
+	while (ft_whitespace(*str--))
+		end++;
+	buf = ft_strsub(s, begin - 1, (len - ((begin - 1) + (end))));
+	return (--begin == len ? ft_strnew(0) : buf);
 }

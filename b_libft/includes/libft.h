@@ -6,7 +6,7 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 22:59:33 by matmateo          #+#    #+#             */
-/*   Updated: 2018/11/11 15:31:14 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/03 14:16:20 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,7 @@ void	ft_swap(int *a, int *b);
 int		ft_toupper(int c);
 
 int		ft_tolower(int c);
+
+int		ft_whitespace(char c);
 
 #endif
