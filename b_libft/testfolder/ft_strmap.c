@@ -17,14 +17,23 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	unsigned int	i;
 	char			*fresh;
 
-	fresh = ft_strnew(ft_strlen(s));
-	if (fresh == NULL)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	if (!s || !f)
+			  return (NULL);
+	fresh = ft_strnew(ft_strlen(s));
+	if (!fresh)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		fresh[i] = f(s[i]);
+		fresh[i] = (*f)(s[i]);
 		i++;
 	}
+	fresh[i] = '\0';
 	return (fresh);
 }
+
+/*
+**
+**ft_strnew -- produce a new str, but read its length with s.
+**
+*/
