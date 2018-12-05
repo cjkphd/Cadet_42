@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/11/11 15:30:19 by mamateo          ###   ########.fr        #
+#    Updated: 2018/12/03 12:42:26 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ CFILES = ft_atoi.c\
 		 ft_swap.c\
 		 ft_tolower.c\
 		 ft_toupper.c\
+		 ft_whitespace.c\
 		 
 OBJECTS = ft_atoi.o\
 		 ft_bzero.o\
@@ -119,11 +120,12 @@ OBJECTS = ft_atoi.o\
 		 ft_swap.o\
 		 ft_tolower.o\
 		 ft_toupper.o\
+		 ft_whitespace.o\
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(CFILES) $(HEADER)
+	$(CC) $(CFLAGS) $(CFILES) -I $(HEADER)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
