@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 23:56:57 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/03 13:34:27 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/05 00:39:59 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char				*ft_itoa(int n)
 		v = -v;
 	}
 	buf = (char *)malloc(sizeof(char) * (4));
+	if (!buf)
+		return (NULL);
 	s = buf + sizeof(buf);
 	*--s = '\0';
-	if (!s)
-		return (NULL);
 	while (v >= 10)
 	{
 		*--s = '0' + v % 10;

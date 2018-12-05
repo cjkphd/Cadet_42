@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/12/03 12:42:26 by mamateo          ###   ########.fr        #
+#    Updated: 2018/12/05 00:26:20 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ CFILES = ft_atoi.c\
 		 ft_isascii.c\
 		 ft_isdigit.c\
 		 ft_isprint.c\
+		 ft_itoa.c\
 		 ft_memalloc.c\
 		 ft_memccpy.c\
 		 ft_memchr.c\
@@ -36,7 +37,9 @@ CFILES = ft_atoi.c\
 		 ft_putchar.c\
 		 ft_putchar_fd.c\
 		 ft_putendl.c\
+		 ft_putendl_fd.c\
 		 ft_putnbr.c\
+		 ft_putnbr_fd.c\
 		 ft_putstr.c\
 		 ft_putstr_fd.c\
 		 ft_strcat.c\
@@ -77,6 +80,7 @@ OBJECTS = ft_atoi.o\
 		 ft_isascii.o\
 		 ft_isdigit.o\
 		 ft_isprint.o\
+		 ft_itoa.o\
 		 ft_memalloc.o\
 		 ft_memccpy.o\
 		 ft_memchr.o\
@@ -88,7 +92,9 @@ OBJECTS = ft_atoi.o\
 		 ft_putchar.o\
 		 ft_putchar_fd.o\
 		 ft_putendl.o\
+		 ft_putendl_fd.o\
 		 ft_putnbr.o\
+		 ft_putnbr_fd.o\
 		 ft_putstr.o\
 		 ft_putstr_fd.o\
 		 ft_strcat.o\

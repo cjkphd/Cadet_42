@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 16:32:31 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/25 22:48:30 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/05 00:10:43 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 	char	*needle;
 	size_t	l;
 
-	needle  = (char *)s2;
+	needle = (char *)s2;
 	l = ft_strlen(needle);
 	if (*needle == '\0')
 		return ((char *)s1);
