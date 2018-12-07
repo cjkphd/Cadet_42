@@ -128,10 +128,14 @@ OBJECTS = ft_atoi.o\
 		 ft_toupper.o\
 		 ft_whitespace.o\
 
+CFDIR_D:= $(addprefix srcs/, $(CFILES))
+
+HEADDIR_D:= $(addprefix includes/, $(HEADER))
+
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(CFILES) -I $(HEADER)
+	$(CC) $(CFLAGS) $(CFDIR_D) -I $(HEADDIR_D)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
