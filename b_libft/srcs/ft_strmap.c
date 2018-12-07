@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/26 00:11:01 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/06 21:03:21 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	unsigned int	i;
 	char			*fresh;
 
-	fresh = ft_strnew(ft_strlen(s));
+	i = 0;
 	if (!s || !f)
 		return (NULL);
+	fresh = ft_strnew(ft_strlen(s));
 	if (fresh == NULL)
 		return (NULL);
-	i = 0;
 	while (s[i] != '\0')
 	{
 		fresh[i] = (*f)(s[i]);
