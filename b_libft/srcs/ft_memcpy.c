@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 18:26:30 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/30 12:44:26 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:51:26 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/06 21:03:21 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:52:56 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

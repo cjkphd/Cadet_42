@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 10:39:33 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 16:30:59 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:50:12 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isdigit(int c)
 {

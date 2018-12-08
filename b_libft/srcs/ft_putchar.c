@@ -6,11 +6,11 @@
 /*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 11:18:30 by matmateo          #+#    #+#             */
-/*   Updated: 2018/10/06 18:14:57 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:51:41 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putchar(char c)
 {

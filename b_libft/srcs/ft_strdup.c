@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/13 18:09:53 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 16:32:35 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:52:34 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strdup(const char *s1)
 {

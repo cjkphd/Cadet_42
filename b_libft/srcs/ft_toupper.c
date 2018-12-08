@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 16:33:50 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/04 16:32:55 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:53:45 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_toupper(int c)
 {

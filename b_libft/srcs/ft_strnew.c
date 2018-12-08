@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 22:09:05 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/26 00:05:16 by mamateo          ###   ########.fr       */
+/*   Created: 2018/12/07 15:31:15 by mamateo           #+#    #+#             */
+/*   Updated: 2018/12/07 16:53:16 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char		*ft_strnew(size_t size)
 {

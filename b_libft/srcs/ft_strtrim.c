@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:17:06 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/03 12:53:53 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:53:34 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char		*ft_strtrim(char const *s)
 {

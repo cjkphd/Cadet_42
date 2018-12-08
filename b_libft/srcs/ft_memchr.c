@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 19:45:01 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/20 16:03:59 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:51:11 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void			*ft_memchr(const void *s, int c, size_t n)
 {

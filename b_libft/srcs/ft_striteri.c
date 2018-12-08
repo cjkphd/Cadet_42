@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:51:13 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/08 22:24:37 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:52:44 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void				ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

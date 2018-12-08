@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:49:54 by mamateo           #+#    #+#             */
-/*   Updated: 2018/11/08 22:23:14 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:52:37 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

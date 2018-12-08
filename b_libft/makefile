@@ -6,7 +6,7 @@
 #    By: matmateo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/06 17:32:51 by matmateo          #+#    #+#              #
-#    Updated: 2018/12/05 00:26:20 by mamateo          ###   ########.fr        #
+#    Updated: 2018/12/07 16:43:07 by mamateo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -135,7 +135,7 @@ HEADDIR_D:= $(addprefix includes/, $(HEADER))
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(CFDIR_D) -I $(HEADDIR_D)
+	$(CC) $(CFLAGS) $(CFDIR_D) -I $(HEADDIR_D) 
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 

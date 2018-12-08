@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:24:36 by mamateo           #+#    #+#             */
-/*   Updated: 2018/10/29 13:14:28 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:50:41 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isprint(int c)
 {
@@ -21,7 +21,7 @@ int	ft_isprint(int c)
 }
 
 /*
-**  int	main()
+**int	main()
 **{
 **	printf("%d\n", ft_isprint('3'));
 **	printf("%d\n", ft_isprint('a'));

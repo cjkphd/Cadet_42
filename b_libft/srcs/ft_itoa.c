@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 23:56:57 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/05 00:39:59 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/07 16:50:59 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char				*ft_itoa(int n)
 {
