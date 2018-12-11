@@ -6,16 +6,19 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:23:57 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:50:03 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:32:50 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
+
+/*
+** Alphabetic char test from ASCII
+*/

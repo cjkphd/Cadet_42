@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:48:49 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:51:03 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 18:38:37 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void		*ft_memalloc(size_t size)
 {
@@ -22,3 +22,10 @@ void		*ft_memalloc(size_t size)
 	ft_bzero(a, size);
 	return (a);
 }
+
+/*
+** allocates and returns a "fresh" memory area
+** memory allocated is initialize to 0
+** if allocation fails, returns NULL
+** bzero - writes 0 to a byte string
+*/

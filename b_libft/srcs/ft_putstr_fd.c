@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 00:01:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:07 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:57:03 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {
@@ -19,4 +19,5 @@ void	ft_putstr_fd(char const *s, int fd)
 
 /*
 ** ft_strlen: will determine size
+** writes s to the fd
 */

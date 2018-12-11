@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 17:30:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:14 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:59:47 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -31,3 +31,8 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
+
+/*
+** locates a char in a string
+** &str[i] address vs *str[i]
+*/

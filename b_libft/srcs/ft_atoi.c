@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 12:10:36 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:49:29 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 18:28:38 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int					ft_atoi(const char *str)
 {
@@ -39,6 +39,8 @@ int					ft_atoi(const char *str)
 
 /*
 ** Optional Conditions for Discarding Whitespaces:
-**while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
-**|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+** while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
+** || (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+**
+** Long used because of 32 bits (-2^31 - 1 and 2^31-1)
 */

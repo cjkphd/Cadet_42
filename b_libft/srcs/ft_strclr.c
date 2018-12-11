@@ -6,14 +6,18 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:28:10 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:18 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 12:03:14 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {
 	while (s != NULL && *s)
 		*s++ = '\0';
 }
+
+/*
+** basically sets every char of the string to value '\0'
+*/

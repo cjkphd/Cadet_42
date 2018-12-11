@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matmateo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/06 11:18:52 by matmateo          #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:03 by mamateo          ###   ########.fr       */
+/*   Created: 2018/12/07 17:19:18 by mamateo           #+#    #+#             */
+/*   Updated: 2018/12/07 17:19:20 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

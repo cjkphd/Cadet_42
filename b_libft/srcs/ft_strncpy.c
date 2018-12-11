@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 17:53:07 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:08 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:35:15 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char		*ft_strncpy(char *dst, const char *src, size_t len)
 {
@@ -26,3 +26,9 @@ char		*ft_strncpy(char *dst, const char *src, size_t len)
 		}
 	return (poop);
 }
+
+/*
+** Copies at most len from src into dst.
+** If src < len, remainder of dst is '\0'
+** otherwise ;
+*/

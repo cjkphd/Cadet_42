@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:24:33 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:25 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/05 00:11:15 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 static int	arraylen(char *str, char delim)
 {

@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 15:03:48 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:28 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:40:28 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
@@ -31,3 +31,10 @@ char	*ft_strstr(const char *s1, const char *s2)
 	}
 	return ((char *)NULL);
 }
+
+/*
+** Returns a pointer to the first occurrence of str2 in str1,
+** or a null pointer if str2 is not part of str1.
+** The matching process does not include the terminating null-characters,
+** but it stops there.
+*/

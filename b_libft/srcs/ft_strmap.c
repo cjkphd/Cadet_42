@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:56 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:25:52 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
@@ -31,3 +31,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	fresh[i] = '\0';
 	return (fresh);
 }
+
+/*
+** Similar to ft_striteri: 
+** Applies (*f) to (char ) and create "fresh" new string
+** resulting from the successive applications of f.
+*/

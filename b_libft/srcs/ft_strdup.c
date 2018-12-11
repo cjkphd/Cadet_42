@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/13 18:09:53 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:34 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 12:55:36 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -32,3 +32,7 @@ char	*ft_strdup(const char *s1)
 	dupe[i] = '\0';
 	return (dupe);
 }
+
+/*
+** Saves a copy of a string in memory, and can be freed(3)
+*/

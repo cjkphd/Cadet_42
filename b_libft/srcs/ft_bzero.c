@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 18:26:37 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:49:47 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:30:44 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -27,3 +27,7 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*
+** Writes 0 to a byte string
+*/

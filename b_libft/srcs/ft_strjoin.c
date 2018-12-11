@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:51:55 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:52:46 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 13:23:26 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
@@ -38,3 +38,12 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (dst);
 }
+
+/*
+** Allocates and returns Fresh string ending with '\0'
+** Return interconnecting of both strings
+** Failing returns NULL:
+** strlen of s1 & s2
+** mallocs a memory size for dst
+** strcpy s1 & s2
+*/

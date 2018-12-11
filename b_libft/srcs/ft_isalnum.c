@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:22:54 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:49:59 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:32:14 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -18,6 +18,9 @@ int	ft_isalnum(int c)
 			(c >= 'a' && c <= 'z') ||
 			(c >= 'A' && c <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
+
+/*
+** Alphanumeric char test--for isalpha & isdigit being true.
+*/

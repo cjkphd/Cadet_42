@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 13:19:36 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:03 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:27:35 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char		*ft_strncat(char *s1, const char *s2, size_t n)
 {
@@ -27,3 +27,9 @@ char		*ft_strncat(char *s1, const char *s2, size_t n)
 	s1[i + j] = '\0';
 	return (s1);
 }
+
+/*
+** Concatenate (link together) strings.
+** Appends not more than n chars, from s2 and then adds '\0'
+** src and dst should NOT overlap == undefined
+*/

@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 12:34:48 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:51:37 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 18:57:19 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -26,3 +26,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (temp);
 }
+
+/*
+** fills a byte string with int c byte value
+*/

@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 09:56:07 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:51:07 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 18:40:30 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
@@ -26,3 +26,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*
+** copies string until char is found
+*/

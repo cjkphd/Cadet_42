@@ -6,18 +6,17 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:24:04 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:50:08 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 16:12:29 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	if (c >= 000 && c <= 0177)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 /*

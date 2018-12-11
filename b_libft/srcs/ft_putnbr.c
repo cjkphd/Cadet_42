@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:12:57 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:51:56 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/09 19:02:00 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {
@@ -34,5 +34,6 @@ void	ft_putnbr(int n)
 }
 
 /*
-**ft_putnbr: factorial and recursively multiplies in a cascading down manner.
+** ft_putnbr: factorial and recursively multiplies in a cascading down manner.
+** '0' char + n % 10, to turn value into ASCII char
 */

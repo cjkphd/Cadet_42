@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/02 14:36:05 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:51:16 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:54:22 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -27,9 +27,6 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*
-** const unsigned char *str1 = s1;
-** const unsigned char *str2 = s2;
-** while (count-- > 0)
-** if (*s1++ != *s2++)
-** if s1[-1] is less than s2[-1] if true -1 otherwise 1
+** compare the first n bytes of memory area s1 and memory area s2
+** consists of (< 0 s1 < s2), (> 0 s1 > s2), and (= 0 s1 == s2)
 */

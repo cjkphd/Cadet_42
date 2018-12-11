@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:17:06 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:34 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:41:57 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char		*ft_strtrim(char const *s)
 {
@@ -33,3 +33,9 @@ char		*ft_strtrim(char const *s)
 	buf = ft_strsub(s, begin - 1, (len - ((begin - 1) + (end))));
 	return (--begin == len ? ft_strnew(0) : buf);
 }
+
+/*
+** Allocates and returns copy of string w/o whitespaces at begin or end
+** If s has no whitespaces, the function returns a copy of s.
+** Fails returns NULL.
+*/

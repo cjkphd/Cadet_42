@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:06:42 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:12 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:36:31 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int			ft_strnequ(char const *s1, char const *s2, size_t n)
 {
@@ -27,3 +27,8 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n)
 	}
 	return (1);
 }
+
+/*
+** Alphabetically compares s1 and s2 up to n size_t
+** If both strings are identical return 1 : 0;
+*/

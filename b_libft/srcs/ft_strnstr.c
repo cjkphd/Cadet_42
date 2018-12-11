@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 16:32:31 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:53:19 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 16:36:58 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
@@ -29,3 +29,7 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+** Finds a string within a string
+*/

@@ -6,11 +6,11 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 23:56:57 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/07 16:50:59 by mamateo          ###   ########.fr       */
+/*   Updated: 2018/12/10 11:50:33 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char				*ft_itoa(int n)
 {
@@ -42,4 +42,5 @@ char				*ft_itoa(int n)
 }
 /*
 ** v == variable
+** malloc used to create memory space--(4)
 */
