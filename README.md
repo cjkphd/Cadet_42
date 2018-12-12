@@ -1,2 +1,2 @@
-# Cadet_42
-After becoming a 42 student, I begin my journey through peer-to-peer projects, based in C language.` 
+# libft
+After becoming a 42 student, I began my journey...the first project is creating my own library also known as libft. 
