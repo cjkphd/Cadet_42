@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:52:51 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/10 16:45:32 by mamateo          ###   ########.fr       */
+/*   Created: 2018/12/18 16:03:59 by mamateo           #+#    #+#             */
+/*   Updated: 2018/12/18 16:04:22 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned int	i;
-	char			*fresh;
+	t_list		*list;
 
-	i = 0;
-	if (!s || !f)
+	if (!(list = (t_list *)malloc(sizeof(*list))))
 		return (NULL);
-	fresh = ft_strnew(ft_strlen(s));
-	if (fresh == NULL)
-		return (NULL);
-	while (s[i] != '\0')
+	if (!content)
 	{
-		fresh[i] = (*f)(s[i]);
-		i++;
+		list->content = NULL;
+		list->content_size = 0;
 	}
-	fresh[i] = '\0';
-	return (fresh);
+	else
+	{
+		if (!(list->content = malloc(content_size)))
+			return (NULL);
+		ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }
-
-/*
-** Similar to ft_striteri:
-** Applies (*f) to (char ) and create "fresh" new string
-** resulting from the successive applications of f.
-*/
