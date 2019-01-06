@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strlen_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:48:49 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/31 16:39:10 by mamateo          ###   ########.fr       */
+/*   Created: 2019/01/03 16:56:38 by mamateo           #+#    #+#             */
+/*   Updated: 2019/01/03 18:32:39 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memalloc(size_t size)
+int		ft_strlen_fd(char **str, int fd)
 {
-	char	*a;
+	int len;
 
-	a = malloc(size);
-	if (!a)
-		return (NULL);
-	ft_bzero(a, size);
-	return (a);
+	len = 0;
+	while (str[fd][len] != '\n' && str[fd][len] != '0')
+		len++;
+	return (len);
 }
 
 /*
-** allocates and returns a "fresh" memory area
-** memory allocated is initialize to 0
-** if allocation fails, returns NULL
-** bzero - writes 0 to a byte string
+** len = ft_strlen_fd(s, fd);
 */

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:48:49 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/31 16:39:10 by mamateo          ###   ########.fr       */
+/*   Created: 2019/01/06 13:23:28 by mamateo           #+#    #+#             */
+/*   Updated: 2019/01/06 13:23:29 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memalloc(size_t size)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*a;
+	t_list	*head;
+	t_list	*body;
 
-	a = malloc(size);
-	if (!a)
+	if (!lst || !f)
 		return (NULL);
-	ft_bzero(a, size);
-	return (a);
+	body = f(lst);
+	head = body;
+	while ((lst = lst->next))
+	{
+		head->next = f(lst);
+		head = head->next;
+	}
+	return (body);
 }
-
-/*
-** allocates and returns a "fresh" memory area
-** memory allocated is initialize to 0
-** if allocation fails, returns NULL
-** bzero - writes 0 to a byte string
-*/

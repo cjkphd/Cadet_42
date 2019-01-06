@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_cpytill.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:48:49 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/31 16:39:10 by mamateo          ###   ########.fr       */
+/*   Created: 2018/12/27 15:27:21 by mamateo           #+#    #+#             */
+/*   Updated: 2018/12/29 12:30:54 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memalloc(size_t size)
+int			ft_cpytill(char **dst, char *src, char c)
 {
-	char	*a;
+	int		i;
+	int		count;
+	int		pos;
 
-	a = malloc(size);
-	if (!a)
-		return (NULL);
-	ft_bzero(a, size);
-	return (a);
+	i = -1;
+	count = 0;
+	while (src[++i])
+		if (src[i] == c)
+			break ;
+	pos = i;
+	if (!(*dst = ft_strnew(i)))
+		return (0);
+	while (src[count] && count < i)
+	{
+		if (!(*dst = ft_strjoinch(*dst, src[count])))
+			return (0);
+		count++;
+	}
+	return (pos);
 }
-
-/*
-** allocates and returns a "fresh" memory area
-** memory allocated is initialize to 0
-** if allocation fails, returns NULL
-** bzero - writes 0 to a byte string
-*/

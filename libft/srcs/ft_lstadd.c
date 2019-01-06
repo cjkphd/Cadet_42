@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/18 16:03:40 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/18 16:03:52 by mamateo          ###   ########.fr       */
+/*   Created: 2019/01/06 13:22:46 by mamateo           #+#    #+#             */
+/*   Updated: 2019/01/06 13:22:54 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = *alst;
+	t_list	*body;
+
+	body = *alst;
 	*alst = new;
+	(*alst)->next = body;
 }

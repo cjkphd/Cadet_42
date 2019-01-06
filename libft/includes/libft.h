@@ -6,7 +6,7 @@
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 17:20:25 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/18 15:48:11 by mamateo          ###   ########.fr       */
+/*   Updated: 2019/01/06 13:29:34 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+int					ft_cpytill(char **dst, char *src, char c);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -53,8 +54,10 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoinch(char const *s1, char c);
 size_t				ft_strlcat(char *dst, const char *src, size_t n);
 size_t				ft_strlen(const char *s);
+int					ft_strlen_fd(char **str, int fd);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strncat(char *s1, const char *s2, size_t n);
@@ -80,6 +83,10 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstiter(t_list *lst, void(*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(const void *content, size_t content_size);
-void				ft_lstadd(t_list **alst, t_list *n);
 #endif

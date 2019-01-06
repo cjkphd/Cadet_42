@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 21:48:49 by mamateo           #+#    #+#             */
-/*   Updated: 2018/12/31 16:39:10 by mamateo          ###   ########.fr       */
+/*   Created: 2019/01/06 13:23:13 by mamateo           #+#    #+#             */
+/*   Updated: 2019/01/06 13:23:15 by mamateo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memalloc(size_t size)
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	char	*a;
-
-	a = malloc(size);
-	if (!a)
-		return (NULL);
-	ft_bzero(a, size);
-	return (a);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }
-
-/*
-** allocates and returns a "fresh" memory area
-** memory allocated is initialize to 0
-** if allocation fails, returns NULL
-** bzero - writes 0 to a byte string
-*/
